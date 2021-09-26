@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
+from django.conf.urls import include, url
 
+from django.urls import path, include
+from rest_framework.authtoken import views
+
+# Create a router and register our viewsets with it.
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # (Built in) REST Token generating endpoint.
+    path('api-token-auth/', views.obtain_auth_token),
+    # (Built in) admin view
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^', include('levels.urls')),
 ]
