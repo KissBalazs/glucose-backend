@@ -9,7 +9,7 @@ class LevelSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = Level
-        fields = ['id', 'title', 'description', 'owner']
+        fields = ['id', 'start', 'stop' , 'owner']
 
 
 class UserSerializer(serializers.ModelSerializer):
