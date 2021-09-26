@@ -19,6 +19,7 @@
 - The app provides a basic security (more of a Proof of Concept in this state) where a user can require an Auth Token to access the REST endpoints.
 - The app has a bult-in viewer, as Django-rest provides it.
 - There are already existing data in the DB to test the application.
+- I wrote only two tests, as instead of full coverage, I focused my time on other tasks, but this is not something I would normally do as testing is always a priority.
 - I have run out of time while was working on the filtering and ordering of the data.
 - I think I have provided a solid base for the tasks and bonus objectives, but I couldn't finish them as I ran out of time.
 - I spend roughly 1.5 hours on the backend side (I have less experience with backend frameworks, my main focus in Frontend usually)
